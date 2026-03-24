@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFuture | Volunteer & Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><i class="fas fa-leaf"></i> EcoFuture</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="environment.html">Environment</a></li>
+                    <li><a href="contact.html" class="active">Volunteer</a></li>
+                </ul>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Volunteer With Us</h1>
+                <p>Be part of meaningful change. Explore opportunities and connect with our CSR team.</p>
+            </div>
+        </section>
+
+        <div class="contact-wrapper">
+            <div class="container contact-grid">
+                <!-- volunteer opportunities list -->
+                <div class="volunteer-opportunities">
+                    <h2><i class="fas fa-hands-helping"></i> Volunteer Opportunities</h2>
+                    <ul class="volunteer-list">
+                        <li><i class="fas fa-calendar-alt"></i> Urban Tree Planting Drives (Weekends)</li>
+                        <li><i class="fas fa-chalkboard-user"></i> Digital Skills Mentor for Youth</li>
+                        <li><i class="fas fa-recycle"></i> Zero-Waste Community Workshops</li>
+                        <li><i class="fas fa-hand-sparkles"></i> Disaster Relief Support (Trained volunteers)</li>
+                    </ul>
+                    <p><strong>Ready to make a difference?</strong> Fill the form or reach us at <i class="fas fa-envelope"></i> volunteer@ecofuture.org</p>
+                </div>
+
+                <!-- contact form -->
+                <div class="contact-form-container">
+                    <h2>Get In Touch</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Area of Interest</label>
+                            <select id="interest" name="interest">
+                                <option>Environmental Initiatives</option>
+                                <option>Community Outreach</option>
+                                <option>Education Programs</option>
+                                <option>Fundraising & Events</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Availability</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit Application <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- External links to partner NGOs + internal policy link (demo internal link) -->
+        <section class="resources-section">
+            <div class="container">
+                <h3>Additional Resources & Partners</h3>
+                <div class="links-row">
+                    <a href="#" class="internal-link-demo"><i class="fas fa-file-alt"></i> Volunteer Handbook (Internal Policy)</a>
+                    <a href="https://www.unv.org/" target="_blank"><i class="fas fa-external-link-alt"></i> UN Volunteers</a>
+                    <a href="https://www.volunteermatch.org/" target="_blank"><i class="fas fa-external-link-alt"></i> VolunteerMatch</a>
+                    <a href="index.html"><i class="fas fa-home"></i> Return to Homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EcoFuture - Corporate Social Responsibility. Together for a sustainable world.</p>
+            <div class="social-icons"><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i></div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+/* ================================================================
+   File: style.css
+   Description: Global styles for CSR Website (5 pages).
+   Features: Flexbox/Grid layout, responsiveness, modern design.
+   ================================================================ */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #1e2a32;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #2c7a4d;
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+/* Header & Navigation */
+header {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.8rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #2c7a4d;
+}
+
+.logo i {
+    margin-right: 8px;
+    color: #2c7a4d;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #1e2a32;
+    transition: color 0.2s;
+    font-size: 1rem;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #2c7a4d;
+    border-bottom: 2px solid #2c7a4d;
+    padding-bottom: 4px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2c7a4d;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background: #2c7a4d;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1f5e3a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44,122,77,0.2);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #eaf7ed 0%, #d1e8da 100%);
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: #1e3a2f;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+/* Video Section */
+.video-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Stats Grid (flex/grid) */
+.stats-grid, .image-grid, .env-grid, .image-grid-community {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: #f9fafb;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 24px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    background: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.stat-card i {
+    font-size: 2.8rem;
+    color: #2c7a4d;
+    margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+/* Project gallery images */
+.image-grid img, .grid-item img, .community-card img, .env-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid .grid-item, .community-card, .env-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.grid-item p, .community-card p, .env-item p {
+    padding: 0.8rem;
+    font-weight: 500;
+}
+
+/* Lists (ordered/unordered) */
+.styled-list, .partner-list, .volunteer-list, .numbered-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.styled-list li, .partner-list li, .volunteer-list li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.styled-list li i, .partner-list li i, .volunteer-list li i {
+    color: #2c7a4d;
+    width: 24px;
+}
+
+.numbered-list {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+}
+
+.numbered-list li {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.partner-list a, .external-link-highlight a {
+    text-decoration: none;
+    color: #2c7a4d;
+    font-weight: 500;
+}
+
+.partner-list a:hover, .external-link-highlight a:hover {
+    text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+    background: #eef2f0;
+    padding: 60px 0 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+/* Flex row for content */
+.flex-row {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.flex-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-box, .image-box {
+    flex: 1;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.video-mini {
+    margin: 3rem 0;
+}
+
+/* Contact page specific */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 40px 0;
+}
+
+.volunteer-opportunities {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 28px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #2c7a4d;
+    box-shadow: 0 0 0 3px rgba(44,122,77,0.2);
+}
+
+.resources-section {
+    background: #f1f5f9;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.links-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.links-row a {
+    color: #1e2a32;
+    text-decoration: none;
+    font-weight: 500;
+    background: white;
+    padding: 8px 20px;
+    border-radius: 40px;
+    transition: all 0.2s;
+}
+
+.links-row a:hover {
+    background: #2c7a4d;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #1e2a32;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.social-icons i {
+    font-size: 1.3rem;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.social-icons i:hover {
+    color: #2c7a4d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 1rem 0;
+        text-align: center;
+        gap: 1rem;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-container {
+        flex-direction: row;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .flex-row, .flex-row.reverse {
+        flex-direction: column;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+    }
+}
